@@ -10,7 +10,7 @@ export default function Dashboard({ onNavigate, onOpenProfile }: Props) {
   const { analytics, matcherName, profiles } = useApp();
 
   // Find some recent new profiles to display in a quick view
-  const recentProfiles = [...profiles]
+  const recentProfiles = [ ...profiles ]
     .sort((a, b) => new Date(b.joinedDate).getTime() - new Date(a.joinedDate).getTime())
     .slice(0, 5);
 
@@ -27,9 +27,9 @@ export default function Dashboard({ onNavigate, onOpenProfile }: Props) {
     <div className="page animate-fade-in">
       <div className="dash-hero">
         <div style={{ position: 'relative', zIndex: 2 }}>
-          <div className="dash-hero-tag">Concierge Portal</div>
+          <div className="dash-hero-tag">Dashboard</div>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '8px' }}>
-            Good Day, {matcherName.split(' ')[0]}
+            Good Day, {matcherName.split(' ')[ 0 ]}
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '520px', lineHeight: 1.5 }}>
             You have <span style={{ fontWeight: 600, color: 'var(--primary)' }}>{analytics.pendingApprovals} match proposals</span> awaiting review. Your portfolio remains balanced and active.
@@ -43,9 +43,27 @@ export default function Dashboard({ onNavigate, onOpenProfile }: Props) {
             </button>
           </div>
         </div>
-        <div style={{ fontSize: '7rem', opacity: 0.1, userSelect: 'none', position: 'absolute', right: '30px', top: '50%', transform: 'translateY(-50%)' }}>
-          🤝
-        </div>
+        {/* Decorative wedding image — fills the full hero box */}
+        <img
+          src="/7d74c3982c6fd9fed4037c347656b68f.webp.jpg"
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center',
+            filter: 'blur(2px)',
+            opacity: 0.5,
+            userSelect: 'none',
+            pointerEvents: 'none',
+            borderRadius: '12px',
+            maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 25%, rgba(0,0,0,1) 60%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 25%, rgba(0,0,0,1) 60%)',
+          }}
+        />
       </div>
 
       {/* Stats Cards */}
@@ -127,7 +145,7 @@ export default function Dashboard({ onNavigate, onOpenProfile }: Props) {
                 className="hover-card"
               >
                 <div className="profile-avatar" style={{ background: p.avatarColor, width: 34, height: 34 }}>
-                  {p.firstName[0]}{p.lastName[0]}
+                  {p.firstName[ 0 ]}{p.lastName[ 0 ]}
                 </div>
                 <div style={{ flex: 1, overflow: 'hidden' }}>
                   <div style={{ fontWeight: 600, fontSize: '0.88rem' }} className="truncate">

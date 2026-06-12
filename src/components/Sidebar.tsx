@@ -16,13 +16,13 @@ interface Props {
 
 export default function Sidebar({ activePage, onNavigate }: Props) {
   const { logout, matcherName } = useApp();
-  const initials = matcherName.split(' ').map(n => n[0]).join('').toUpperCase();
+  const initials = matcherName.split(' ').map(n => n[ 0 ]).join('').toUpperCase();
 
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <h1>Concierge Portal</h1>
-        <p>Elite Matchmaking</p>
+        <h1>Dashboard</h1>
+        <p> Matchmaking</p>
       </div>
 
       <nav className="sidebar-nav">

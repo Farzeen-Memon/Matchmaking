@@ -8,7 +8,7 @@ interface Props {
 
 export default function Topbar({ searchQuery, onSearch, onSearchFocus }: Props) {
   const { matcherName } = useApp();
-  const initials = matcherName.split(' ').map(n => n[0]).join('').toUpperCase();
+  const initials = matcherName.split(' ').map(n => n[ 0 ]).join('').toUpperCase();
 
   return (
     <header className="topbar">
@@ -37,7 +37,7 @@ export default function Topbar({ searchQuery, onSearch, onSearchFocus }: Props) 
 
       <div className="topbar-right">
         <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginRight: '8px' }}>
-          Concierge: <span style={{ fontWeight: 600, color: 'var(--primary)' }}>{matcherName}</span>
+          MatchMaker: <span style={{ fontWeight: 600, color: 'var(--primary)' }}>{matcherName}</span>
         </div>
         <div className="avatar-chip">
           <div className="avatar-circle">{initials}</div>

@@ -60,7 +60,7 @@ export default function Login() {
         {/* ── Navbar ───────────────────────────────────────── */}
         <nav className="lp-nav">
           <div className="lp-nav-left">
-            <span>TDC ── WORKSPACE</span>
+            <span style={{ fontFamily: "'Playfair Display', serif", letterSpacing: '0.05em', fontSize: '1rem' }}>Matchmaker</span>
           </div>
           <div className="lp-nav-right">
             <span style={{ marginRight: '16px', fontWeight: 500 }}>matchmakers.co/global</span>
@@ -132,71 +132,130 @@ export default function Login() {
               {/* Final CTA marker */}
               <div className="lp-save-later" onClick={() => handleOpenModal('signin')}>
                 <span>Start Matching Smarter</span>
-                <span style={{ fontSize: '1.2rem', marginLeft: '4px' }}>🔖</span>
-                <span style={{ fontSize: '1.2rem', color: '#ffb300' }}>✦</span>
+                <span style={{ fontSize: '1rem', marginLeft: '6px', opacity: 0.6 }}>&#8594;</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* ── Second Section (Features & Detailed Workspace Highlights) ── */}
+        {/* ── Second Section (Premium Smart Matchmaking) ── */}
         <div className="lp-second-section">
           <div className="lp-second-header">
-            <span className="lp-section-tag">Internal Workspace</span>
-            <h2 className="lp-second-title">Smart Matchmaking Architecture</h2>
+            <span className="lp-section-tag">Professional Workflow</span>
+            <h2 className="lp-second-title">How Matchmakers Work Smarter</h2>
             <p className="lp-second-desc">
-              Track customer progress, review verified profiles, generate AI-powered match recommendations, and manage introductions from one intuitive dashboard.
+              An AI-assisted workflow designed to help professional matchmakers discover compatible matches, manage customer journeys, and create meaningful introductions.
             </p>
           </div>
 
           <div className="lp-features-grid">
+            {/* Card 1 */}
             <div className="lp-feature-card-item">
-              <div className="lp-feature-icon">👤</div>
-              <h3 className="lp-feature-item-title">Verified Customer Profiles</h3>
+              <div className="lp-feature-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h3 className="lp-feature-item-title">Verified Profiles</h3>
               <p className="lp-feature-item-desc">
-                Review extensive bio-data covering 20+ specific Indian matrimonial values including religion, caste, diet, and family parameters.
+                Review detailed customer profiles, preferences, family background, and relationship goals.
               </p>
             </div>
+            {/* Card 2 */}
             <div className="lp-feature-card-item">
-              <div className="lp-feature-icon">🧠</div>
-              <h3 className="lp-feature-item-title">AI Compatibility Scoring</h3>
+              <div className="lp-feature-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4l3 3"/>
+                </svg>
+              </div>
+              <h3 className="lp-feature-item-title">AI Compatibility Analysis</h3>
               <p className="lp-feature-item-desc">
-                Execute automated compatibility reports powered by Google Gemini, generating structured match strengths and lifestyle concerns instantly.
+                Evaluate values, lifestyle preferences, career alignment, and future expectations.
               </p>
             </div>
+            {/* Card 3 */}
             <div className="lp-feature-card-item">
-              <div className="lp-feature-icon">💖</div>
-              <h3 className="lp-feature-item-title">Match Recommendations</h3>
+              <div className="lp-feature-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <h3 className="lp-feature-item-title">Intelligent Match Discovery</h3>
               <p className="lp-feature-item-desc">
-                Run our gender-specific compatibility formula, tailoring matching criteria for both traditional and progressive lifestyle filters.
+                Receive ranked matches with compatibility scores and AI-generated reasoning.
               </p>
             </div>
+            {/* Card 4 */}
             <div className="lp-feature-card-item">
-              <div className="lp-feature-icon">📈</div>
-              <h3 className="lp-feature-item-title">Customer Journey Tracking</h3>
+              <div className="lp-feature-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <h3 className="lp-feature-item-title">Matchmaker Insights</h3>
               <p className="lp-feature-item-desc">
-                Oversee customer staging from onboarding, manual and background verification, to first meetings and matching success.
+                Capture consultation notes, preferences, concerns, and customer feedback.
               </p>
             </div>
+            {/* Card 5 */}
             <div className="lp-feature-card-item">
-              <div className="lp-feature-icon">📝</div>
-              <h3 className="lp-feature-item-title">Matchmaker Notes</h3>
+              <div className="lp-feature-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <h3 className="lp-feature-item-title">Journey Tracking</h3>
               <p className="lp-feature-item-desc">
-                Log quick matching observations, consultation call summaries, and customized notes with full historic audit logging.
+                Monitor every stage from onboarding through successful introductions.
               </p>
             </div>
+            {/* Card 6 */}
             <div className="lp-feature-card-item">
-              <div className="lp-feature-icon">✉️</div>
-              <h3 className="lp-feature-item-title">Introduction Management</h3>
+              <div className="lp-feature-icon-svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <h3 className="lp-feature-item-title">Smart Introductions</h3>
               <p className="lp-feature-item-desc">
-                Formulate match introduction pitches, preview email drafts, and trigger simulated customer outreach proposals with one click.
+                Generate personalized introductions and manage match proposals efficiently.
               </p>
+            </div>
+          </div>
+
+          {/* Metrics Row */}
+          <div className="lp-metrics-row">
+            <div className="lp-metric-item">
+              <div className="lp-metric-value">100+</div>
+              <div className="lp-metric-label">Verified Profiles</div>
+            </div>
+            <div className="lp-metric-divider" />
+            <div className="lp-metric-item">
+              <div className="lp-metric-value">AI</div>
+              <div className="lp-metric-label">Powered Matching</div>
+            </div>
+            <div className="lp-metric-divider" />
+            <div className="lp-metric-item">
+              <div className="lp-metric-value">Personal</div>
+              <div className="lp-metric-label">Introductions</div>
+            </div>
+            <div className="lp-metric-divider" />
+            <div className="lp-metric-item">
+              <div className="lp-metric-value">Real-Time</div>
+              <div className="lp-metric-label">Journey Tracking</div>
             </div>
           </div>
 
           <div className="lp-second-footer">
             <p className="lp-second-supporting-text">
-              Designed for modern matchmaking teams to build meaningful, lasting connections through intelligent recommendations and streamlined workflows.
+              Built for professional matchmakers who value precision, discretion, and meaningful outcomes.
             </p>
             <button className="lp-btn-final" onClick={() => handleOpenModal('signin')}>
               Start Matching Smarter

@@ -861,9 +861,9 @@ select {
 
 .dash-hero-tag {
   display: inline-block;
-  background: var(--accent-light);
-  color: var(--accent);
-  border: 1px solid rgba(224, 174, 67, 0.3);
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid rgba(0, 73, 83, 0.18);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1780,6 +1780,26 @@ select {
   }
 }
 
+/* Metrics row responsive */
+@media (max-width: 640px) {
+  .lp-metrics-row {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 20px;
+    row-gap: 20px;
+  }
+
+  .lp-metric-divider {
+    width: 40px;
+    height: 1px;
+  }
+
+  .lp-metric-item {
+    padding: 0;
+    width: 100%;
+  }
+}
+
 /* ── Second Section Styles ── */
 .lp-workflow-tag {
   font-size: 0.82rem;
@@ -1821,17 +1841,20 @@ select {
 
 .lp-second-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 400;
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  font-weight: 600;
   color: var(--lp-rose);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .lp-second-desc {
-  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(0.88rem, 1.6vw, 1rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
   margin: 0;
+  max-width: 640px;
 }
 
 .lp-features-grid {
@@ -1841,36 +1864,98 @@ select {
 }
 
 .lp-feature-card-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 16px;
-  padding: 24px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 28px 26px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+  border-left: 3px solid transparent;
 }
 
 .lp-feature-card-item:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 228, 225, 0.15);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 228, 225, 0.2);
+  border-left-color: var(--lp-rose);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 
-.lp-feature-icon {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+.lp-feature-icon-svg {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 228, 225, 0.1);
+  border: 1px solid rgba(255, 228, 225, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lp-rose);
+  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
 .lp-feature-item-title {
   font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--lp-rose);
-  margin: 0 0 8px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
 }
 
 .lp-feature-item-desc {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.62);
   margin: 0;
+}
+
+/* Metrics Row */
+.lp-metrics-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255, 228, 225, 0.05);
+  border: 1px solid rgba(255, 228, 225, 0.12);
+  border-radius: 16px;
+  padding: 28px 40px;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.lp-metric-item {
+  text-align: center;
+  padding: 0 32px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.lp-metric-value {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 600;
+  color: var(--lp-rose);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.lp-metric-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lp-metric-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
 }
 
 .lp-second-footer {
@@ -1880,14 +1965,14 @@ select {
   gap: 20px;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 32px;
+  padding-top: 36px;
 }
 
 .lp-second-supporting-text {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 600px;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 480px;
   margin: 0;
   font-style: italic;
 }
