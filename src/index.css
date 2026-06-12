@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 :root {
-  --primary: #006F80;
-  --primary-light: #e6f4f6;
-  --primary-dark: #004f5c;
-  --accent: #E0AE43;
-  --accent-light: #fdf6e3;
-  --bg: #FDFBF7;
+  --primary: #004953;
+  --primary-light: #e0ecec;
+  --primary-dark: #00333a;
+  --accent: #FFE4E1;
+  --accent-light: #fff2f0;
+  --bg: #FAF7F2;
   --surface: #ffffff;
-  --surface-2: #f8f6f1;
-  --border: #e8e3d8;
-  --border-light: #f0ece4;
-  --text-primary: #1a1a2e;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
+  --surface-2: #f7f2ea;
+  --border: #dfdcd3;
+  --border-light: #ece8df;
+  --text-primary: #111a1b;
+  --text-secondary: #5a6668;
+  --text-muted: #8c9b9d;
   --success: #2C8A70;
   --success-light: #e6f5f1;
   --warning: #C47A5A;
@@ -658,3 +658,513 @@ input, textarea, select {
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .section-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
 .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+/* ── New Landing Page Styles (Midnight Green & Misty Rose Mockup) ── */
+.lp-root {
+  --lp-dark: #004953;
+  --lp-rose: #FFE4E1;
+  background: var(--lp-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.lp-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.lp-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.lp-nav-left {
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lp-nav-left span {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+}
+
+.lp-nav-right {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.lp-nav-btn {
+  background: none;
+  border: 1px solid transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.lp-nav-btn:hover {
+  opacity: 0.8;
+}
+
+.lp-nav-btn-filled {
+  background: var(--lp-rose);
+  color: var(--lp-dark);
+}
+
+.lp-nav-btn-filled:hover {
+  background: white;
+  color: var(--lp-dark);
+}
+
+.lp-hero-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: var(--lp-dark);
+  flex-grow: 1;
+}
+
+.lp-hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lp-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lp-hero-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0,73,83,0.9) 0%, rgba(0,73,83,0.4) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lp-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lp-hero-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--lp-rose);
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.lp-avatars-overlay {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.lp-avatar-circle {
+  width: 60px;
+  height: 80px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 2px solid white;
+  background: #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.lp-avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom banner section (Misty Rose) */
+.lp-bottom-banner {
+  background: var(--lp-rose);
+  color: var(--lp-dark);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.lp-bottom-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--lp-dark);
+}
+
+.lp-bottom-title em {
+  font-style: italic;
+}
+
+.lp-bottom-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--lp-dark);
+  margin-top: 8px;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.lp-interactive-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.lp-social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.lp-social-icon {
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: var(--lp-dark);
+}
+
+.lp-social-icon:hover {
+  opacity: 0.6;
+}
+
+.lp-buttons-container {
+  display: flex;
+  gap: 16px;
+}
+
+.lp-btn-journey {
+  background: var(--lp-dark);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.lp-btn-journey:hover {
+  transform: translateY(-2px);
+  background: #00333a;
+}
+
+.lp-btn-signup {
+  background: transparent;
+  color: var(--lp-dark);
+  border: 1px solid var(--lp-dark);
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.lp-btn-signup:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 73, 83, 0.05);
+}
+
+.lp-save-later {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Auth Modal Styles */
+.lp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 73, 83, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: lpFadeIn 0.3s ease;
+}
+
+@keyframes lpFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lp-modal-card {
+  background: white;
+  color: var(--lp-dark);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: relative;
+  animation: modalScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lp-modal-header {
+  background: var(--lp-dark);
+  color: white;
+  padding: 30px 24px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.lp-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.lp-modal-close:hover {
+  opacity: 1;
+}
+
+.lp-modal-body {
+  padding: 24px 24px 30px;
+}
+
+.lp-tabs {
+  display: flex;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+}
+
+.lp-tab-btn {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #777;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.lp-tab-btn.active {
+  color: var(--lp-dark);
+  border-bottom-color: var(--lp-dark);
+}
+
+.lp-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.lp-form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-align: left;
+}
+
+.lp-form-input {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background: white;
+  color: var(--lp-dark);
+}
+
+.lp-form-input:focus {
+  border-color: var(--lp-dark);
+}
+
+.lp-error-msg {
+  background: #fdf2f2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.lp-btn-submit {
+  width: 100%;
+  background: var(--lp-dark);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.lp-btn-submit:hover {
+  background: #00333a;
+}
+
+.lp-demo-box {
+  margin-top: 24px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+}
+
+.lp-demo-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.lp-demo-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lp-demo-details code {
+  font-size: 0.85rem;
+  color: var(--lp-dark);
+  font-family: monospace;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .lp-hero-title {
+    font-size: 3.5rem;
+  }
+  .lp-bottom-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lp-container {
+    padding: 16px;
+  }
+  .lp-hero-image-wrapper {
+    height: 320px;
+  }
+  .lp-hero-title {
+    font-size: 2.2rem;
+  }
+  .lp-bottom-title {
+    font-size: 2rem;
+  }
+  .lp-interactive-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .lp-social-icons {
+    order: 2;
+  }
+  .lp-buttons-container {
+    order: 1;
+    flex-direction: column;
+    width: 100%;
+  }
+  .lp-buttons-container button {
+    width: 100%;
+  }
+  .lp-save-later {
+    order: 3;
+  }
+  .lp-avatars-overlay {
+    bottom: 20px;
+    right: 20px;
+  }
+  .lp-avatar-circle {
+    width: 45px;
+    height: 60px;
+  }
+  .lp-nav-right {
+    gap: 12px;
+  }
+}
+
