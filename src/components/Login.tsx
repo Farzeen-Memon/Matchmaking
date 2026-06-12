@@ -60,7 +60,7 @@ export default function Login() {
         {/* ── Navbar ───────────────────────────────────────── */}
         <nav className="lp-nav">
           <div className="lp-nav-left">
-            <span>COLOR ── COMBOS</span>
+            <span>TDC ── WORKSPACE</span>
           </div>
           <div className="lp-nav-right">
             <span style={{ marginRight: '16px', fontWeight: 500 }}>matchmakers.co/global</span>
@@ -78,28 +78,30 @@ export default function Login() {
           <div className="lp-hero-image-wrapper">
             <img
               src="/7d74c3982c6fd9fed4037c347656b68f.webp.jpg"
-              alt="Find Your Connection"
+              alt="Manage Meaningful Matches"
               className="lp-hero-image"
             />
-            {/* Find Your Connection overlay */}
+            {/* Manage Meaningful Matches overlay */}
             <div className="lp-hero-text-overlay">
-              <h1 className="lp-hero-title">Find Your Connection</h1>
-              <div className="lp-hero-subtitle">HEARTS HEX #004953</div>
-            </div>
-
-            {/* Circular portraits overlapping bottom-right of the image */}
-            <div className="lp-avatars-overlay">
-              <div className="lp-avatar-circle">
-                <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=200&fit=crop&crop=faces&q=80"
-                  alt="Male Profile Portrait"
-                />
+              <h1 className="lp-hero-title">Manage Meaningful Matches</h1>
+              <div className="lp-hero-subtitle">
+                An AI-powered matchmaking workspace for managing client profiles, tracking journeys, and discovering compatible matches.
               </div>
-              <div className="lp-avatar-circle">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=200&fit=crop&crop=faces&q=80"
-                  alt="Female Profile Portrait"
-                />
+              
+              {/* Circular portraits overlapping bottom-right of the image on desktop, centering on mobile */}
+              <div className="lp-avatars-overlay">
+                <div className="lp-avatar-circle">
+                  <img
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=200&fit=crop&crop=faces&q=80"
+                    alt="Male Profile Portrait"
+                  />
+                </div>
+                <div className="lp-avatar-circle">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=200&fit=crop&crop=faces&q=80"
+                    alt="Female Profile Portrait"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -107,41 +109,98 @@ export default function Login() {
           {/* ── Bottom Banner Section (Misty Rose) ────────────── */}
           <div className="lp-bottom-banner">
             <h2 className="lp-bottom-title">
-              <em>Deep</em> Connection
+              <em>Smart</em> Matchmaking
             </h2>
-            <div className="lp-bottom-subtitle">HEARTS HEX #FFE4E1</div>
+            <div className="lp-bottom-subtitle">100+ Profiles • AI Ranked Matches • Real-Time Tracking</div>
 
             <div className="lp-interactive-row">
-              {/* Social action icons (Instagram-like style) */}
+              {/* Decorative workflow tags */}
               <div className="lp-social-icons">
-                <span className="lp-social-icon" style={{ fontSize: '1.4rem' }}>
-                  ♡
-                </span>
-                <span className="lp-social-icon" style={{ fontSize: '1.4rem' }}>
-                  💬
-                </span>
-                <span className="lp-social-icon" style={{ fontSize: '1.4rem' }}>
-                  ➦
-                </span>
+                <span className="lp-workflow-tag">✦ Matchmaker Console</span>
               </div>
 
               {/* Action buttons */}
               <div className="lp-buttons-container">
                 <button className="lp-btn-journey" onClick={() => handleOpenModal('signin')}>
-                  Start Your Journey
+                  View Clients
                 </button>
                 <button className="lp-btn-signup" onClick={() => handleOpenModal('signup')}>
-                  Sign Up Now
+                  Explore Matches
                 </button>
               </div>
 
-              {/* Bookmark & sparkle actions */}
-              <div className="lp-save-later">
-                <span>SAVE for LATER</span>
+              {/* Final CTA marker */}
+              <div className="lp-save-later" onClick={() => handleOpenModal('signin')}>
+                <span>Start Matching Smarter</span>
                 <span style={{ fontSize: '1.2rem', marginLeft: '4px' }}>🔖</span>
                 <span style={{ fontSize: '1.2rem', color: '#ffb300' }}>✦</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* ── Second Section (Features & Detailed Workspace Highlights) ── */}
+        <div className="lp-second-section">
+          <div className="lp-second-header">
+            <span className="lp-section-tag">Internal Workspace</span>
+            <h2 className="lp-second-title">Smart Matchmaking Architecture</h2>
+            <p className="lp-second-desc">
+              Track customer progress, review verified profiles, generate AI-powered match recommendations, and manage introductions from one intuitive dashboard.
+            </p>
+          </div>
+
+          <div className="lp-features-grid">
+            <div className="lp-feature-card-item">
+              <div className="lp-feature-icon">👤</div>
+              <h3 className="lp-feature-item-title">Verified Customer Profiles</h3>
+              <p className="lp-feature-item-desc">
+                Review extensive bio-data covering 20+ specific Indian matrimonial values including religion, caste, diet, and family parameters.
+              </p>
+            </div>
+            <div className="lp-feature-card-item">
+              <div className="lp-feature-icon">🧠</div>
+              <h3 className="lp-feature-item-title">AI Compatibility Scoring</h3>
+              <p className="lp-feature-item-desc">
+                Execute automated compatibility reports powered by Google Gemini, generating structured match strengths and lifestyle concerns instantly.
+              </p>
+            </div>
+            <div className="lp-feature-card-item">
+              <div className="lp-feature-icon">💖</div>
+              <h3 className="lp-feature-item-title">Match Recommendations</h3>
+              <p className="lp-feature-item-desc">
+                Run our gender-specific compatibility formula, tailoring matching criteria for both traditional and progressive lifestyle filters.
+              </p>
+            </div>
+            <div className="lp-feature-card-item">
+              <div className="lp-feature-icon">📈</div>
+              <h3 className="lp-feature-item-title">Customer Journey Tracking</h3>
+              <p className="lp-feature-item-desc">
+                Oversee customer staging from onboarding, manual and background verification, to first meetings and matching success.
+              </p>
+            </div>
+            <div className="lp-feature-card-item">
+              <div className="lp-feature-icon">📝</div>
+              <h3 className="lp-feature-item-title">Matchmaker Notes</h3>
+              <p className="lp-feature-item-desc">
+                Log quick matching observations, consultation call summaries, and customized notes with full historic audit logging.
+              </p>
+            </div>
+            <div className="lp-feature-card-item">
+              <div className="lp-feature-icon">✉️</div>
+              <h3 className="lp-feature-item-title">Introduction Management</h3>
+              <p className="lp-feature-item-desc">
+                Formulate match introduction pitches, preview email drafts, and trigger simulated customer outreach proposals with one click.
+              </p>
+            </div>
+          </div>
+
+          <div className="lp-second-footer">
+            <p className="lp-second-supporting-text">
+              Designed for modern matchmaking teams to build meaningful, lasting connections through intelligent recommendations and streamlined workflows.
+            </p>
+            <button className="lp-btn-final" onClick={() => handleOpenModal('signin')}>
+              Start Matching Smarter
+            </button>
           </div>
         </div>
       </div>

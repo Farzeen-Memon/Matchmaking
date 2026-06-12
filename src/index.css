@@ -789,7 +789,7 @@ input, textarea, select {
 
 .lp-hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 5.5vw, 4rem);
   font-weight: 400;
   color: white;
   margin: 0;
@@ -799,12 +799,13 @@ input, textarea, select {
 }
 
 .lp-hero-subtitle {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  letter-spacing: 0.05em;
   color: var(--lp-rose);
   margin-top: 12px;
   font-weight: 500;
+  max-width: 680px;
+  line-height: 1.4;
 }
 
 .lp-avatars-overlay {
@@ -846,7 +847,7 @@ input, textarea, select {
 
 .lp-bottom-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   font-weight: 400;
   margin: 0;
   line-height: 1.1;
@@ -858,8 +859,8 @@ input, textarea, select {
 }
 
 .lp-bottom-subtitle {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--lp-dark);
   margin-top: 8px;
@@ -1156,15 +1157,163 @@ input, textarea, select {
     order: 3;
   }
   .lp-avatars-overlay {
-    bottom: 20px;
-    right: 20px;
+    position: static;
+    margin-top: 16px;
+    justify-content: center;
   }
   .lp-avatar-circle {
     width: 45px;
     height: 60px;
+    border-radius: 18px;
   }
   .lp-nav-right {
     gap: 12px;
   }
+}
+
+@media (max-width: 1024px) {
+  .lp-avatars-overlay {
+    position: static;
+    margin-top: 16px;
+    justify-content: center;
+    bottom: auto;
+    right: auto;
+  }
+  .lp-avatar-circle {
+    width: 50px;
+    height: 66px;
+    border-radius: 20px;
+  }
+}
+
+/* ── Second Section Styles ── */
+.lp-workflow-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--lp-dark);
+  letter-spacing: 0.05em;
+  opacity: 0.95;
+}
+
+.lp-second-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 48px);
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.lp-second-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lp-section-tag {
+  display: inline-block;
+  background: rgba(255, 228, 225, 0.1);
+  color: var(--lp-rose);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.lp-second-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 400;
+  color: var(--lp-rose);
+  margin: 0 0 12px;
+}
+
+.lp-second-desc {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.lp-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.lp-feature-card-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.lp-feature-card-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 228, 225, 0.15);
+}
+
+.lp-feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.lp-feature-item-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--lp-rose);
+  margin: 0 0 8px;
+}
+
+.lp-feature-item-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.lp-second-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 32px;
+}
+
+.lp-second-supporting-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
+  margin: 0;
+  font-style: italic;
+}
+
+.lp-btn-final {
+  background: var(--lp-rose);
+  color: var(--lp-dark);
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.lp-btn-final:hover {
+  transform: translateY(-2px);
+  background: white;
 }
 
