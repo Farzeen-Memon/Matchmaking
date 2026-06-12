@@ -471,7 +471,7 @@ export default function MemberDetail({ profileId, onBack, onOpenProfile }: Props
 
                   {/* Right Column - AI Insights Explanation */}
                   <div style={{ flex: '1.5', minWidth: '300px', display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', justifyBetween: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                       <span className="field-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         🧠 AI Analysis Explanation
                       </span>
@@ -487,7 +487,7 @@ export default function MemberDetail({ profileId, onBack, onOpenProfile }: Props
                     </div>
 
                     {isAILoading && (
-                      <div style={{ display: 'flex', flexCol: 'column', alignItems: 'center', justifyContent: 'center', padding: '24px', flex: 1 }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '24px', flex: 1 }}>
                         <div className="spinner" style={{ border: '3px solid var(--border-light)', borderTop: '3px solid var(--primary)', borderRadius: '50%', width: '24px', height: '24px', animation: 'spin 0.8s linear infinite' }}></div>
                         <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '8px' }}>AI Matchmaker is analyzing profiles...</span>
                       </div>
@@ -495,7 +495,7 @@ export default function MemberDetail({ profileId, onBack, onOpenProfile }: Props
 
                     {!isAILoading && aiExp && (
                       <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '10px', height: '100%' }}>
-                        <p style={{ fontSize: '0.85rem', fontWeight: 500, fontStyle: 'italic', color: 'var(--text-primary)', lineLight: 1.4, margin: 0 }}>
+                        <p style={{ fontSize: '0.85rem', fontWeight: 500, fontStyle: 'italic', color: 'var(--text-primary)', lineHeight: 1.4, margin: 0 }}>
                           "{aiExp.summary}"
                         </p>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '4px' }}>

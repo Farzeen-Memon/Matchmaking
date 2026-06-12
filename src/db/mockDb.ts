@@ -290,9 +290,6 @@ function generateProfile(gender: Gender, index: number): Profile {
 
 // ─── Database Manager ────────────────────────────────────────
 const DB_KEY = 'matchmaker_db';
-const NOTES_KEY = 'matchmaker_notes';
-const ACTIVITY_KEY = 'matchmaker_activity';
-const SENT_MATCHES_KEY = 'matchmaker_sent_matches';
 
 function seedDatabase(): Profile[] {
   // Use a seeded random for reproducible data

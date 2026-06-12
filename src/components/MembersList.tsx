@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
-import type { Profile, Gender, MaritalStatus, ClientStatus, JourneyStage } from '../types';
+import type { Profile, Gender, MaritalStatus, ClientStatus } from '../types';
 import { saveProfile } from '../db/mockDb';
 
 interface Props {

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
-import { getTopMatches, getScoreLabel } from '../utils/matcher';
+import { getTopMatches, getScoreLabel, computeCompatibilityScore } from '../utils/matcher';
 import { generateAIExplanation } from '../services/aiService';
 import type { Profile, AIExplanation } from '../types';
 
@@ -265,7 +265,7 @@ export default function Matches({ onOpenProfile }: Props) {
                     )}
 
                     {!isAILoading && !aiExp && (
-                      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justify: 'center', border: '1px dashed var(--border)', borderRadius: 'var(--radius-sm)', padding: '20px' }}>
+                      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border)', borderRadius: 'var(--radius-sm)', padding: '20px' }}>
                         <span className="text-muted" style={{ fontSize: '0.78rem' }}>Click "Generate AI Explanations" to run models.</span>
                       </div>
                     )}
